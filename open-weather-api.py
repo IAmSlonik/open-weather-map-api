@@ -14,9 +14,8 @@ def check_weather(city):
 
     windSpeed = response.json()['wind']['speed']
     windDeg = response.json()['wind']['deg']
-    windGust = response.json()['wind']['gust']
     
-    print(f'{city.upper()}:\n Weather: {weatherMain}, {weatherDesc}\n Temp: {mainTemp},\n Pressure: {mainPress},\n Humidity: {mainHumi},\n Wind speed: {windSpeed},\n Wind degrees: {windDeg},\n Wind Gust: {windGust}')
+    print(f'{city.upper()}:\n Weather: {weatherMain}, {weatherDesc}\n Temp: {mainTemp}°K,\n Pressure: {mainPress} hPa,\n Humidity: {mainHumi}%,\n Wind speed: {windSpeed} m/s,\n Wind degrees: {windDeg}°.')
 
 city = input("Enter the city name: ")
 check_weather(city)
